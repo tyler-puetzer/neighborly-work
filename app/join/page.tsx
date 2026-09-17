@@ -1,5 +1,71 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import { FadeUp, ScaleIn } from '@/components/Motion'
-export const metadata={title:'Our Story',description:'The founding story and operating philosophy behind Neighborly Work.'}
-export default function About(){return <main className="pt-32"><section className="section-pad"><div className="container-nw"><div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-end"><FadeUp><div><div className="eyebrow text-[#0894F0]">Our story</div><h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Two teenagers.<br/>One very simple idea.</h1></div></FadeUp><FadeUp delay={.08}><p className="max-w-xl text-lg leading-8 text-[#5A6678]">Start with useful work. Do it well. Learn what customers value. Then build something that can grow.</p></FadeUp></div><div className="mt-14 grid gap-6 lg:grid-cols-3"><ScaleIn><div className="rounded-[2rem] bg-[#0B1220] p-7 text-white"><div className="eyebrow text-white/45">01 / Start</div><h2 className="mt-8 text-2xl font-bold">Trash cans</h2><p className="mt-3 leading-7 text-white/60">The company began with a narrow, hands-on service and the willingness to do a job most people do not want to do.</p></div></ScaleIn><ScaleIn delay={.06}><div className="rounded-[2rem] bg-[#eef8ff] p-7"><div className="eyebrow text-[#0894F0]">02 / Expand</div><h2 className="mt-8 text-2xl font-bold">Neighborhoods</h2><p className="mt-3 leading-7 text-[#5A6678]">The vision is to move from one-off work into recurring neighborhood relationships and a broader set of outdoor services.</p></div></ScaleIn><ScaleIn delay={.12}><div className="rounded-[2rem] bg-[#f1f8ea] p-7"><div className="eyebrow text-[#4b9710]">03 / Multiply</div><h2 className="mt-8 text-2xl font-bold">People</h2><p className="mt-3 leading-7 text-[#5A6678]">The long-term mission is to help more people learn the skills and confidence to build a local business of their own.</p></div></ScaleIn></div><div className="mt-16 grid gap-12 lg:grid-cols-[1.15fr_.85fr]"><FadeUp><div className="prose-lite max-w-3xl"><p>Neighborly Work is intentionally built around the idea that work and entrepreneurship do not have to be separate worlds. A customer gets a service. The person doing the service gets a real business education at the same time.</p><p>That means learning how to communicate clearly, show up, price work, market a service, solve a problem, take feedback, and earn repeat business.</p><p>The standard stays simple: take pride in the work, treat people well, get your hands dirty, and keep building.</p></div></FadeUp><FadeUp delay={.08}><div className="rounded-[2.5rem] border border-slate-200 bg-white p-7 shadow-soft"><div className="eyebrow text-[#0894F0]">The long view</div><div className="mt-7 text-3xl font-bold leading-tight">Local roots today.<br/><span className="text-[#0894F0]">National ambition.</span></div><p className="mt-5 leading-7 text-[#5A6678]">Neighborly Work currently serves Central North Carolina and is designed with expansion in mind.</p><Link href="/join" className="btn-primary mt-7">Build with Neighborly Work <ArrowRight size={17} className="ml-2"/></Link></div></FadeUp></div></div></section></main>}
+
+export const metadata = {
+  title: 'Join Us',
+  description: 'Learn about working with Neighborly Work or building a local Neighborly Work business.',
+}
+
+const expectations = [
+  'Take pride in the work.',
+  'Treat customers with respect and communicate clearly.',
+  'Be willing to get your hands dirty.',
+  'Learn how the business works, not just the task itself.',
+]
+
+export default function JoinPage() {
+  return (
+    <main className="pt-32">
+      <section className="section-pad bg-[#f7fafc]">
+        <div className="container-nw">
+          <FadeUp>
+            <div className="max-w-4xl">
+              <div className="eyebrow text-[#0894F0]">Franchise / Join Us</div>
+              <h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Work with us.<br />Or build with us.</h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work is building opportunities for people who want to do real work, serve customers well, and learn how to build a business from the ground up.</p>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container-nw">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <ScaleIn>
+              <div id="work" className="h-full rounded-[2.5rem] bg-[#0B1220] p-8 text-white sm:p-10">
+                <div className="eyebrow text-white/45">Work with Neighborly Work</div>
+                <h2 className="mt-5 text-3xl font-bold sm:text-4xl">Start by doing the work.</h2>
+                <p className="mt-5 leading-8 text-white/65">We are accepting people who want to work, learn, and contribute. The goal is not just to complete a job; it is to build habits around service, responsibility, communication, and entrepreneurship.</p>
+                <div className="mt-8 space-y-4">
+                  {expectations.map((item) => (
+                    <div key={item} className="flex gap-3">
+                      <div className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#63C400] text-[#0B1220]"><Check size={15} strokeWidth={3} /></div>
+                      <div className="text-white/80">{item}</div>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/contact" className="btn-primary mt-9 bg-white text-[#0B1220] hover:bg-slate-100">Ask About Working <ArrowRight size={18} className="ml-2" /></Link>
+              </div>
+            </ScaleIn>
+
+            <ScaleIn delay={0.08}>
+              <div id="franchise" className="h-full rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-soft sm:p-10">
+                <div className="eyebrow text-[#0894F0]">Build with Neighborly Work</div>
+                <h2 className="mt-5 text-3xl font-bold sm:text-4xl">Build a local operation.</h2>
+                <p className="mt-5 leading-8 text-[#5A6678]">The long-term vision includes people operating local Neighborly Work businesses with access to practical resources, materials, marketing knowledge, and networking.</p>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {['Materials', 'Marketing knowledge', 'Networking', 'Business education'].map((item) => (
+                    <div key={item} className="rounded-2xl bg-[#f7fafc] p-5 font-semibold">{item}</div>
+                  ))}
+                </div>
+                <p className="mt-8 text-sm leading-6 text-[#5A6678]">Neighborly Work is currently operating in Central North Carolina while keeping a national expansion vision.</p>
+                <Link href="/contact" className="btn-secondary mt-7">Ask About Franchising <ArrowRight size={18} className="ml-2" /></Link>
+              </div>
+            </ScaleIn>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
