@@ -1,5 +1,68 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { FadeUp, ScaleIn } from '@/components/Motion'
-export const metadata={title:'Our Story',description:'The founding story and operating philosophy behind Neighborly Work.'}
-export default function About(){return <main className="pt-32"><section className="section-pad"><div className="container-nw"><div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-end"><FadeUp><div><div className="eyebrow text-[#0894F0]">Our story</div><h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Two teenagers.<br/>One very simple idea.</h1></div></FadeUp><FadeUp delay={.08}><p className="max-w-xl text-lg leading-8 text-[#5A6678]">Start with useful work. Do it well. Learn what customers value. Then build something that can grow.</p></FadeUp></div><div className="mt-14 grid gap-6 lg:grid-cols-3"><ScaleIn><div className="rounded-[2rem] bg-[#0B1220] p-7 text-white"><div className="eyebrow text-white/45">01 / Start</div><h2 className="mt-8 text-2xl font-bold">Trash cans</h2><p className="mt-3 leading-7 text-white/60">The company began with a narrow, hands-on service and the willingness to do a job most people do not want to do.</p></div></ScaleIn><ScaleIn delay={.06}><div className="rounded-[2rem] bg-[#eef8ff] p-7"><div className="eyebrow text-[#0894F0]">02 / Expand</div><h2 className="mt-8 text-2xl font-bold">Neighborhoods</h2><p className="mt-3 leading-7 text-[#5A6678]">The vision is to move from one-off work into recurring neighborhood relationships and a broader set of outdoor services.</p></div></ScaleIn><ScaleIn delay={.12}><div className="rounded-[2rem] bg-[#f1f8ea] p-7"><div className="eyebrow text-[#4b9710]">03 / Multiply</div><h2 className="mt-8 text-2xl font-bold">People</h2><p className="mt-3 leading-7 text-[#5A6678]">The long-term mission is to help more people learn the skills and confidence to build a local business of their own.</p></div></ScaleIn></div><div className="mt-16 grid gap-12 lg:grid-cols-[1.15fr_.85fr]"><FadeUp><div className="prose-lite max-w-3xl"><p>Neighborly Work is intentionally built around the idea that work and entrepreneurship do not have to be separate worlds. A customer gets a service. The person doing the service gets a real business education at the same time.</p><p>That means learning how to communicate clearly, show up, price work, market a service, solve a problem, take feedback, and earn repeat business.</p><p>The standard stays simple: take pride in the work, treat people well, get your hands dirty, and keep building.</p></div></FadeUp><FadeUp delay={.08}><div className="rounded-[2.5rem] border border-slate-200 bg-white p-7 shadow-soft"><div className="eyebrow text-[#0894F0]">The long view</div><div className="mt-7 text-3xl font-bold leading-tight">Local roots today.<br/><span className="text-[#0894F0]">National ambition.</span></div><p className="mt-5 leading-7 text-[#5A6678]">Neighborly Work currently serves Central North Carolina and is designed with expansion in mind.</p><Link href="/join" className="btn-primary mt-7">Build with Neighborly Work <ArrowRight size={17} className="ml-2"/></Link></div></FadeUp></div></div></section></main>}
+import { ServiceIcon, Arrow } from '@/components/Icons'
+import { services } from '@/lib/site'
+
+export const metadata = {
+  title: 'Services',
+  description: 'Outdoor and property services offered by Neighborly Work in Central North Carolina.',
+}
+
+export default function ServicesPage() {
+  return (
+    <main className="pt-32">
+      <section className="section-pad bg-[#f7fafc]">
+        <div className="container-nw">
+          <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+            <FadeUp>
+              <div>
+                <div className="eyebrow text-[#0894F0]">Services</div>
+                <h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Outdoor work,<br />done with care.</h1>
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.08}>
+              <p className="max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work provides hands-on outdoor and property services in Central North Carolina, with a focus on quality work, clear communication, and treating every property with respect.</p>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container-nw">
+          <div className="grid gap-4 md:grid-cols-2">
+            {services.map((service, index) => (
+              <FadeUp key={service.title} delay={index * 0.05}>
+                <article className="service-card h-full">
+                  <div className="flex items-start justify-between">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">
+                      <ServiceIcon icon={service.icon} />
+                    </div>
+                    <Arrow />
+                  </div>
+                  <div className="eyebrow mt-8 text-slate-400">{service.eyebrow}</div>
+                  <h2 className="mt-2 text-2xl font-bold">{service.title}</h2>
+                  <p className="mt-3 leading-7 text-[#5A6678]">{service.blurb}</p>
+                  <Link href="/contact" className="mt-7 inline-flex items-center font-semibold text-[#0894F0] hover:text-[#0b77bd]">Ask about this service <ArrowRight size={16} className="ml-2" /></Link>
+                </article>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad bg-[#0B1220] text-white">
+        <div className="container-nw">
+          <ScaleIn>
+            <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-8 sm:p-12">
+              <div className="eyebrow text-[#63C400]">Need something else?</div>
+              <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Tell us the job.</h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-white/65">Neighborly Work is built around hands-on outdoor and property work. Describe what you need and we can determine whether it fits the services we offer.</p>
+              <Link href="/contact" className="btn-primary mt-8 bg-white text-[#0B1220] hover:bg-slate-100">Get in Contact <ArrowRight size={18} className="ml-2" /></Link>
+            </div>
+          </ScaleIn>
+        </div>
+      </section>
+    </main>
+  )
+}
