@@ -9,11 +9,12 @@ export const site = {
 }
 
 export const services = [
-  {title:'Trash Can Cleaning', slug:'trash-can-cleaning', blurb:'A cleaner, better-smelling routine for one of the dirtiest jobs around.', eyebrow:'Clean • Simple • Recurring', icon:'trash'},
-  {title:'Lawn Mowing', slug:'lawn-mowing', blurb:'Consistent mowing and property care that keeps your place looking handled.', eyebrow:'Routine • Reliable • Sharp', icon:'grass'},
-  {title:'Landscaping', slug:'landscaping', blurb:'Practical outdoor improvements, cleanups, and detail work for properties.', eyebrow:'Refresh • Maintain • Improve', icon:'sprout'},
-  {title:'Junk Removal', slug:'junk-removal', blurb:'Get unwanted material out of the way and leave the space usable again.', eyebrow:'Clear • Haul • Reset', icon:'truck'},
-  {title:'Other Outdoor & Property Services', slug:'other-services', blurb:'Need a hands-on property job that does not fit a neat category? Tell us what you need.', eyebrow:'Tell us the job', icon:'wrench'},
+  {title:'Trash Can Cleaning', slug:'trash-can-cleaning', blurb:'We clean the cans most people would rather not deal with.', eyebrow:'Clean • Simple • Recurring', icon:'trash', image:'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Lawn Mowing', slug:'lawn-mowing', blurb:'Regular mowing to keep the yard looking clean and under control.', eyebrow:'Routine • Reliable • Sharp', icon:'grass', image:'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Landscaping', slug:'landscaping', blurb:'Cleanups, planting, and the outdoor work that helps a property look better.', eyebrow:'Refresh • Maintain • Improve', icon:'sprout', image:'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Junk Removal', slug:'junk-removal', blurb:'We haul away unwanted stuff and leave the space ready to use.', eyebrow:'Clear • Haul • Reset', icon:'truck', image:'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Decorations & Light Hanging', slug:'decorations-light-hanging', blurb:'Seasonal decorations and light hanging for homes and properties.', eyebrow:'Hang • Set up • Take down', icon:'sparkles', image:'https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Something Else?', slug:'other-services', blurb:'If it is an outdoor or property job, reach out. We can talk through it.', eyebrow:'Just ask', icon:'wrench', image:'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85'},
 ]
 
 export const nav = [
