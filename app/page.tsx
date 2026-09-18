@@ -7,7 +7,26 @@ import { BeforeAfter } from '@/components/BeforeAfter'
 import { services } from '@/lib/site'
 
 export default function Home(){return <main>
-<section className="relative overflow-hidden pt-36 sm:pt-44"><div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_78%_12%,rgba(8,148,240,.18),transparent_28%),radial-gradient(circle_at_10%_65%,rgba(99,196,0,.08),transparent_30%)]"/><div className="absolute inset-0 -z-10 opacity-70 grid-fade"/><div className="container-nw pb-20 lg:pb-28"><div className="grid items-end gap-12 lg:grid-cols-[1.05fr_.95fr]"><div><FadeUp><div className="eyebrow text-[#0894F0]">Expanding across Central North Carolina</div></FadeUp><FadeUp delay={.06}><h1 className="display mt-5 max-w-5xl text-5xl font-bold leading-[.96] sm:text-6xl lg:text-8xl">Neighborly<br/><span className="text-[#0894F0]">Work.</span></h1></FadeUp><FadeUp delay={.12}><p className="mt-7 max-w-xl text-lg leading-8 text-[#5A6678] sm:text-xl">Neighborly Work handles the dirty outdoor and property jobs that need to be done; while building a pathway for young people to learn how to run a business.</p></FadeUp><FadeUp delay={.18}><div className="mt-9 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="btn-primary">Request Service <ArrowRight size={18} className="ml-2"/></Link><Link href="/join" className="btn-secondary">Work or Franchise With Us</Link></div></FadeUp></div><ScaleIn delay={.12} className="relative -mr-20 lg:-mr-40"><div className="hero-photo-wrap"><img src="https://images.foxtv.com/static.fox26houston.com/www.fox26houston.com/content/uploads/2023/06/1280/720/Screenshot-2023-06-22-183843.jpg?ve=1&tl=1" alt="Outdoor property work" className="hero-photo"/><div className="hero-photo-fade"/><div className="absolute bottom-8 right-8 max-w-xs rounded-3xl border border-white/25 bg-[#0B1220]/65 px-5 py-4 text-white backdrop-blur-md"><div className="eyebrow text-white/55">Neighborly Work</div><div className="mt-1 font-semibold">Dirty jobs. Done right.</div></div></div></ScaleIn></div></div></section>
+<section className="hero-section relative overflow-hidden">
+  <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_78%_12%,rgba(8,148,240,.18),transparent_28%),radial-gradient(circle_at_10%_65%,rgba(99,196,0,.08),transparent_30%)]"/>
+  <div className="absolute inset-0 -z-10 opacity-70 grid-fade"/>
+  <div className="container-nw hero-container">
+    <div className="grid h-full items-start lg:grid-cols-[1.05fr_.95fr]">
+      <div className="relative z-10 hero-copy">
+        <FadeUp><div className="eyebrow text-[#0894F0]">Expanding across Central North Carolina</div></FadeUp>
+        <FadeUp delay={.06}><h1 className="display mt-5 max-w-5xl text-5xl font-bold leading-[.96] sm:text-6xl lg:text-8xl">Neighborly<br/><span className="text-[#0894F0]">Work.</span></h1></FadeUp>
+        <FadeUp delay={.12}><p className="mt-7 max-w-xl text-lg leading-8 text-[#5A6678] sm:text-xl">Neighborly Work handles the dirty outdoor and property jobs that need to be done; while building a pathway for young people to learn how to run a business.</p></FadeUp>
+        <FadeUp delay={.18}><div className="mt-9 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="btn-primary">Request Service <ArrowRight size={18} className="ml-2"/></Link><Link href="/join" className="btn-secondary">Work or Franchise With Us</Link></div></FadeUp>
+      </div>
+      <ScaleIn delay={.12} className="hero-image-column">
+        <div className="hero-photo-wrap">
+          <img src="https://images.foxtv.com/static.fox26houston.com/www.fox26houston.com/content/uploads/2023/06/1280/720/Screenshot-2023-06-22-183843.jpg?ve=1&tl=1" alt="Outdoor property work" className="hero-photo"/>
+          <div className="hero-photo-fade"/>
+        </div>
+      </ScaleIn>
+    </div>
+  </div>
+</section>
 
 <section className="section-pad border-y border-slate-100 bg-white"><div className="container-nw"><div className="section-heading-center"><div className="eyebrow text-[#0894F0]">What we do</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">The work is simple.<br/>The standard is not.</h2></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{services.map((s,i)=><FadeUp key={s.title} delay={i*.05}><Link href="/services" className="service-card group block" style={{backgroundImage:'none'} as CSSProperties}><div className="service-card-image" style={{backgroundImage:'url(' + s.image + ')'}}/><div className="service-card-content"><div className="flex items-start justify-between"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white"><ServiceIcon icon={s.icon}/></div><Arrow/></div><div className="eyebrow mt-7 text-slate-400">{s.eyebrow}</div><h3 className="mt-2 text-xl font-bold">{s.title}</h3><p className="mt-2 text-sm leading-6 text-[#5A6678]">{s.blurb}</p></div></Link></FadeUp>)}</div></div></section>
 
