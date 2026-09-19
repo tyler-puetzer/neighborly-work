@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { CSSProperties } from 'react'
-import { ArrowRight, BriefcaseBusiness, Check, Globe2, Handshake, Sparkles, Users, ShieldCheck } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, DollarSign, Globe2, Handshake, Sparkles, Users, ShieldCheck } from 'lucide-react'
 import { FadeUp, ScaleIn } from '@/components/Motion'
 import { ServiceIcon, Arrow } from '@/components/Icons'
 import { BeforeAfter } from '@/components/BeforeAfter'
@@ -138,8 +138,8 @@ export default function Home(){return <main>
       <FadeUp>
         <div>
           <div className="eyebrow text-[#0894F0]">Why work with Neighborly Work</div>
-          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Start with a job. Build something bigger.</h2>
-          <p className="mt-5 max-w-xl text-lg leading-8 text-[#5A6678]">We are building a company where you can focus on doing great work while we handle much of the business behind you. You do not have to start from zero or figure everything out alone.</p>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Hard Work Is Just The Beginning.</h2>
+          <p className="mt-5 max-w-xl text-lg leading-8 text-[#5A6678]">We are building a company where you can focus on doing your great work while we handle the business behind you. We are here to help bring your company to its full potential.</p>
           <Link href="/join#work" className="btn-primary mt-7">Apply to Work <ArrowRight size={18} className="ml-2"/></Link>
         </div>
       </FadeUp>
@@ -148,12 +148,12 @@ export default function Home(){return <main>
           ['We handle the business','We help take care of the taxes, paperwork, systems, and other business details so you can spend more time working and serving customers.'],
           ['Branding & equipment','You get a recognizable Neighborly Work brand, uniforms, equipment, and the practical tools needed to show up prepared and professional.'],
           ['Marketing & websites','We handle the marketing, website, and customer-facing systems that help bring work to the business instead of leaving you to find every customer yourself.'],
-          ['Earn more as you grow','High earning potential, with bonuses tied to completing service milestones and building a strong local operation.'],
+          ['High Pay','Get paid $50–$150 per hour on qualifying work, plus additional bonuses. We also provide business cards, pamphlets, and other marketing materials so you do not have to spend your own money building the business.'],
           ['Start with support','Go from having an idea to operating under an established business with systems, resources, and people to fall back on.'],
           ['Be part of something meaningful','Help create opportunities for younger people, serve your community, and grow alongside other people building the Neighborly Work name.']
         ].map(([title,desc],i)=><FadeUp key={title} delay={i*.05}>
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
-            <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">{i===0?<BriefcaseBusiness size={21}/>:i===1?<Users size={21}/>:i===2?<Globe2 size={21}/>:i===3?<Sparkles size={21}/>:i===4?<ShieldCheck size={21}/>:<Handshake size={21}/>}</div>
+          <div className="h-full min-h-[260px] rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">{i===0?<BriefcaseBusiness size={21}/>:i===1?<Users size={21}/>:i===2?<Globe2 size={21}/>:i===3?<DollarSign size={21}/>:i===4?<ShieldCheck size={21}/>:<Handshake size={21}/>}</div>
             <h3 className="mt-6 text-xl font-bold">{title}</h3>
             <p className="mt-2 leading-7 text-[#5A6678]">{desc}</p>
           </div>
