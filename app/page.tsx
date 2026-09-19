@@ -30,6 +30,21 @@ export default function Home(){return <main>
 
 <section className="section-pad border-y border-slate-100 bg-white"><div className="container-nw"><div className="section-heading-center"><div className="eyebrow text-[#0894F0]">What we do</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">The work is simple.<br/>The standard is not.</h2></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{services.map((s,i)=><FadeUp key={s.title} delay={i*.05}><Link href="/services" className="service-card group block" style={{backgroundImage:'none'} as CSSProperties}><div className="service-card-image" style={{backgroundImage:'url(' + s.image + ')'}}/><div className="service-card-content"><div className="flex items-start justify-between"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white"><ServiceIcon icon={s.icon}/></div><Arrow/></div><div className="eyebrow mt-7 text-slate-400">{s.eyebrow}</div><h3 className="mt-2 text-xl font-bold">{s.title}</h3><p className="mt-2 text-sm leading-6 text-[#5A6678]">{s.blurb}</p></div></Link></FadeUp>)}</div></div></section>
 
+<section id="contact-quick" className="section-pad border-y border-slate-100 bg-[#f7fafc]">
+  <div className="container-nw">
+    <div className="rounded-[2.5rem] bg-white border border-slate-200 p-7 shadow-sm sm:p-10">
+      <div className="grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <div className="eyebrow text-[#0894F0]">Get in touch</div>
+          <h2 className="display mt-3 text-3xl font-bold sm:text-4xl">Need something done?</h2>
+          <p className="mt-3 max-w-2xl leading-7 text-[#5A6678]">Tell us what you need. We’ll get back to you and figure out the best way to help.</p>
+        </div>
+        <Link href="/contact" className="btn-primary whitespace-nowrap">Request Service <ArrowRight size={18} className="ml-2"/></Link>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="mission-story" className="section-pad bg-[#f7fafc]">
   <div className="container-nw">
     <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:items-center">
