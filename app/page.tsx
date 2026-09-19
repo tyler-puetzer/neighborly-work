@@ -6,6 +6,7 @@ import { ServiceIcon, Arrow } from '@/components/Icons'
 import { BeforeAfter } from '@/components/BeforeAfter'
 import { services } from '@/lib/site'
 
+// Before/after comparison is rendered by the current client component.
 export default function Home(){return <main>
 <section className="hero-section relative overflow-hidden">
   <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_78%_12%,rgba(8,148,240,.18),transparent_28%),radial-gradient(circle_at_10%_65%,rgba(99,196,0,.08),transparent_30%)]"/>
