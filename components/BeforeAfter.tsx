@@ -1,3 +1,67 @@
 "use client"
 import { useState } from 'react'
-export function BeforeAfter({before,after,label='Example result'}:{before:string;after:string;label?:string}){const [v,setV]=useState(52);return <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 shadow-soft"><div className="relative aspect-[16/10]"><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,.08),transparent_35%),linear-gradient(145deg,#2a3440,#111821)]"><div className="absolute inset-0 flex items-end p-6 text-white"><div><div className="eyebrow text-white/65">Before</div><div className="mt-2 text-2xl font-bold">{before}</div></div></div></div><div className="absolute inset-y-0 left-0 overflow-hidden border-r border-white/70 bg-[radial-gradient(circle_at_75%_20%,rgba(255,255,255,.12),transparent_35%),linear-gradient(145deg,#aee8bc,#4f9670)]" style={{width:`${v}%`}}><div className="absolute inset-0 flex items-end p-6 text-slate-950"><div className="min-w-[18rem]"><div className="eyebrow text-slate-900/55">After</div><div className="mt-2 text-2xl font-bold">{after}</div></div></div></div><div className="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold text-slate-800 shadow">{label}</div><input aria-label="Compare before and after" type="range" min="0" max="100" value={v} onChange={e=>setV(Number(e.target.value))} className="absolute inset-0 h-full w-full cursor-ew-resize opacity-0"/><div className="pointer-events-none absolute top-1/2 -translate-y-1/2" style={{left:`calc(${v}% - 18px)`}}><div className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-white/90 text-slate-900 shadow-xl">↔</div></div></div></div>}
+
+type Category = {
+  name: string
+  before: string
+  after: string
+}
+
+const categories: Category[] = [
+  {
+    name: 'Trash Cans',
+    before: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1600&q=85',
+    after: 'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    name: 'Lawn Care',
+    before: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1600&q=85',
+    after: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    name: 'Landscaping',
+    before: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=85',
+    after: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=85',
+  },
+]
+
+export function BeforeAfter(){
+  const [v,setV]=useState(50)
+  const [category,setCategory]=useState(0)
+  const current=categories[category]
+
+  return <div className="before-after">
+    <div className="before-after-tabs" role="tablist" aria-label="Service examples">
+      {categories.map((item,i)=><button key={item.name} type="button" role="tab" aria-selected={category===i} onClick={()=>{setCategory(i);setV(50)}} className={category===i ? 'before-after-tab active' : 'before-after-tab'}>{item.name}</button>)}
+    </div>
+
+    <div className="before-after-frame">
+      <div className="before-after-image before-after-before">
+        <img src={current.before} alt={current.name + ' before service'} />
+      </div>
+
+      <div className="before-after-image before-after-after" style={{width:v + '%'}}>
+        <img src={current.after} alt={current.name + ' after service'} />
+      </div>
+
+      <div className="before-after-label before-after-label-after">After</div>
+      <div className="before-after-label before-after-label-before">Before</div>
+
+      <input
+        aria-label="Compare before and after"
+        type="range"
+        min="0"
+        max="100"
+        value={v}
+        onChange={e=>setV(Number(e.target.value))}
+        className="before-after-range"
+      />
+
+      <div className="before-after-handle" style={{left:'calc(' + v + '% - 20px)'}}>
+        <div className="before-after-handle-line"/>
+        <div className="before-after-handle-circle">↔</div>
+        <div className="before-after-handle-line"/>
+      </div>
+    </div>
+  </div>
+}
