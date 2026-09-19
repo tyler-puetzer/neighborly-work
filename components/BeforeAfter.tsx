@@ -37,11 +37,11 @@ export function BeforeAfter(){
 
     <div className="before-after-frame">
       <div className="before-after-image before-after-before">
-        <img src={current.before} alt={current.name + ' before service'} />
+        <img src={current.before} alt={current.name + ' before service'} loading="lazy" />
       </div>
 
       <div className="before-after-image before-after-after" style={{width:v + '%'}}>
-        <img src={current.after} alt={current.name + ' after service'} />
+        <img src={current.after} alt={current.name + ' after service'} loading="lazy" />
       </div>
 
       <div className="before-after-label before-after-label-after">After</div>
