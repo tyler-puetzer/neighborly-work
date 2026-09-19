@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { CSSProperties } from 'react'
-import { ArrowRight, Check, Globe2, Handshake, Sparkles, Users, ShieldCheck } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, Check, Globe2, Handshake, Sparkles, Users, ShieldCheck } from 'lucide-react'
 import { FadeUp, ScaleIn } from '@/components/Motion'
 import { ServiceIcon, Arrow } from '@/components/Icons'
 import { BeforeAfter } from '@/components/BeforeAfter'
@@ -66,15 +66,100 @@ export default function Home(){return <main>
   </div>
 </section>
 
-<section className="section-pad bg-[#0B1220] text-white"><div className="container-nw"><div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><FadeUp><div><div className="eyebrow text-[#63C400]">Before / after</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Small details make a property feel handled.</h2><p className="mt-5 max-w-md text-white/60 leading-7">A premium service brand should show its work. This is a placeholder comparison component ready for your real project photography.</p></div></FadeUp><FadeUp delay={.08}><BeforeAfter before="A job that needs attention" after="A property that feels ready" label="Placeholder • swap with real photos"/></FadeUp></div></div></section>
+<section id="reviews" className="section-pad bg-white">
+  <div className="container-nw">
+    <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+      <FadeUp>
+        <div>
+          <div className="eyebrow text-[#0894F0]">Customer Reviews</div>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Let the work speak.</h2>
+          <p className="mt-4 max-w-xl text-[#5A6678]">Real feedback from the people and neighborhoods we serve. Reviews will be connected directly to our Google Business Profile as the site moves into production.</p>
+        </div>
+      </FadeUp>
+      <Link href="/contact#review" className="btn-secondary">Leave a Review</Link>
+    </div>
+    <div className="mt-10 grid gap-4 md:grid-cols-3">
+      {['Verified customer feedback','Recent project feedback','Neighborhood feedback'].map((label,i)=><FadeUp key={label} delay={i*.06}>
+        <div className="rounded-[2rem] border border-slate-200 bg-[#f7fafc] p-7 min-h-[190px]">
+          <div className="flex items-center gap-3">
+            <div className="grid h-10 w-10 place-items-center rounded-full bg-white text-[#0894F0] shadow-sm"><span className="text-lg font-bold">G</span></div>
+            <div>
+              <div className="text-sm font-semibold">{label}</div>
+              <div className="text-xs text-slate-400">Google review feed — coming soon</div>
+            </div>
+          </div>
+          <div className="mt-7 text-sm leading-6 text-[#5A6678]">This space is reserved for verified customer reviews. No testimonials are published here unless they come from a real customer.</div>
+        </div>
+      </FadeUp>)}
+    </div>
+  </div>
+</section>
 
+<section className="section-pad bg-[#0B1220] text-white">
+  <div className="container-nw">
+    <div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
+      <FadeUp>
+        <div>
+          <div className="eyebrow text-[#63C400]">Before / after</div>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Small details make a property feel handled.</h2>
+          <p className="mt-5 max-w-md text-white/60 leading-7">A premium service brand should show its work. This is a placeholder comparison component ready for your real project photography.</p>
+        </div>
+      </FadeUp>
+      <FadeUp delay={.08}><BeforeAfter before="A job that needs attention" after="A property that feels ready" label="Placeholder • swap with real photos"/></FadeUp>
+    </div>
+  </div>
+</section>
 
+<section id="join" className="section-pad">
+  <div className="container-nw">
+    <div className="rounded-[2.8rem] bg-[linear-gradient(135deg,#0894F0,#0b77bd)] p-8 text-white sm:p-12 lg:p-16">
+      <div className="grid gap-10 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+        <FadeUp>
+          <div>
+            <div className="eyebrow text-white/60">Join the build</div>
+            <h2 className="display mt-4 text-4xl font-bold sm:text-6xl">Work with us.<br/>Or build with us.</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">Neighborly Work is actively building a team and a path for people who want to operate a local business with the Neighborly Work name and support behind it.</p>
+          </div>
+        </FadeUp>
+        <FadeUp delay={.08}>
+          <div className="grid gap-3">
+            <Link href="/join#work" className="btn-secondary border-white/20 bg-white text-[#0B1220]">Apply to Work <ArrowRight size={18} className="ml-2"/></Link>
+            <Link href="/join#franchise" className="btn-secondary border-white/20 bg-white/10 text-white hover:bg-white/15">Franchise With Us <ArrowRight size={18} className="ml-2"/></Link>
+          </div>
+        </FadeUp>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section id="mission" className="section-pad bg-[#f6fbfe]"><div className="container-nw"><div className="grid gap-12 lg:grid-cols-[.75fr_1.25fr]"><FadeUp><div><div className="eyebrow text-[#0894F0]">Impact & mission</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Make the work good. Make the opportunity real.</h2></div></FadeUp><div className="grid gap-4 sm:grid-cols-2">{[['Service','Customers get excellent work and straightforward communication.'],['Materials','People building a local operation get the practical resources to start.'],['Marketing','Learn how to find customers, tell the story, and grow demand.'],['Networking','Build relationships with other operators and people who know the work.']].map(([t,d],i)=><FadeUp key={t} delay={i*.06}><div className="rounded-[2rem] border border-slate-200 bg-white p-6"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#0B1220] text-white">{i===0?<ShieldCheck size={21}/>:i===1?<Sparkles size={21}/>:i===2?<Globe2 size={21}/>:<Handshake size={21}/>}</div><h3 className="mt-6 text-xl font-bold">{t}</h3><p className="mt-2 leading-7 text-[#5A6678]">{d}</p></div></FadeUp>)}</div></div><FadeUp delay={.12}><div className="mt-10 rounded-[2.5rem] bg-[#0B1220] p-7 sm:p-10"><div className="max-w-3xl text-2xl font-semibold leading-tight text-white sm:text-4xl">“Do the work. Learn the business. Build something that is yours.”</div><div className="mt-4 text-sm text-white/50">Core brand idea — not a customer testimonial.</div></div></FadeUp></div></section>
-
-<section id="join" className="section-pad"><div className="container-nw"><div className="rounded-[2.8rem] bg-[linear-gradient(135deg,#0894F0,#0b77bd)] p-8 text-white sm:p-12 lg:p-16"><div className="grid gap-10 lg:grid-cols-[1.25fr_.75fr] lg:items-end"><FadeUp><div><div className="eyebrow text-white/60">Join the build</div><h2 className="display mt-4 text-4xl font-bold sm:text-6xl">Work with us.<br/>Or build with us.</h2><p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">Neighborly Work is actively building a team and a path for people who want to operate a local business with the Neighborly Work name and support behind it.</p></div></FadeUp><FadeUp delay={.08}><div className="grid gap-3"><Link href="/join#work" className="btn-secondary border-white/20 bg-white text-[#0B1220]">Apply to Work <ArrowRight size={18} className="ml-2"/></Link><Link href="/join#franchise" className="btn-secondary border-white/20 bg-white/10 text-white hover:bg-white/15">Franchise With Us <ArrowRight size={18} className="ml-2"/></Link></div></FadeUp></div></div></div></section>
-
-<section id="reviews" className="section-pad bg-white"><div className="container-nw"><div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end"><FadeUp><div><div className="eyebrow text-[#0894F0]">Reviews</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Let the work speak.</h2><p className="mt-4 max-w-xl text-[#5A6678]">This section is intentionally ready for verified customer feedback. Do not publish invented testimonials.</p></div></FadeUp><Link href="/contact#review" className="btn-secondary">Leave a Review</Link></div><div className="mt-10 grid gap-4 md:grid-cols-3">{[['Verified feedback','Customer testimonial placeholder','Replace with real review + first name/last initial.'],['Recent project','Customer testimonial placeholder','Add service type + date when available.'],['Neighborhood partner','Customer testimonial placeholder','Only use after receiving permission.']].map(([a,b,c],i)=><FadeUp key={a} delay={i*.06}><div className="rounded-[2rem] border border-dashed border-slate-300 p-7"><div className="eyebrow text-slate-400">{a}</div><div className="mt-5 text-lg font-semibold text-slate-500">“{b}”</div><div className="mt-4 text-sm leading-6 text-[#5A6678]">{c}</div></div></FadeUp>)}</div></div></section>
-
-<section className="section-pad border-t border-slate-100 bg-[#f7fafc]"><div className="container-nw"><div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-center"><FadeUp><div><div className="eyebrow text-[#0894F0]">Ready when you are</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Tell us what needs done.</h2><p className="mt-5 max-w-md leading-7 text-[#5A6678]">Get in touch for service, partnerships, employment, or franchise interest.</p></div></FadeUp><FadeUp delay={.08}><div className="rounded-[2.3rem] border border-slate-200 bg-white p-7 shadow-soft sm:p-9"><div className="grid gap-4 sm:grid-cols-2"><div className="rounded-2xl bg-slate-50 p-5"><div className="eyebrow text-slate-400">Service area</div><div className="mt-2 font-bold">Central North Carolina</div></div><div className="rounded-2xl bg-slate-50 p-5"><div className="eyebrow text-slate-400">Email</div><div className="mt-2 font-bold">hello@neighborlywork.com</div></div></div><Link href="/contact" className="btn-primary mt-4 w-full">Get in Contact <ArrowRight size={18} className="ml-2"/></Link><div className="mt-4 text-center text-xs text-slate-400">Phone currently shown as a placeholder in this prototype.</div></div></FadeUp></div></div></section>
+<section id="work-with-us" className="section-pad bg-[#f7fafc]">
+  <div className="container-nw">
+    <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+      <FadeUp>
+        <div>
+          <div className="eyebrow text-[#0894F0]">Why work with Neighborly Work</div>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Start with a job. Build something bigger.</h2>
+          <p className="mt-5 max-w-xl text-lg leading-8 text-[#5A6678]">We are building a company where you can focus on doing great work while we handle much of the business behind you. You do not have to start from zero or figure everything out alone.</p>
+          <Link href="/join#work" className="btn-primary mt-7">Apply to Work <ArrowRight size={18} className="ml-2"/></Link>
+        </div>
+      </FadeUp>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {[
+          ['We handle the business','We help take care of the taxes, paperwork, systems, and other business details so you can spend more time working and serving customers.'],
+          ['Branding & equipment','You get a recognizable Neighborly Work brand, uniforms, equipment, and the practical tools needed to show up prepared and professional.'],
+          ['Marketing & websites','We handle the marketing, website, and customer-facing systems that help bring work to the business instead of leaving you to find every customer yourself.'],
+          ['Earn more as you grow','High earning potential, with bonuses tied to completing service milestones and building a strong local operation.'],
+          ['Start with support','Go from having an idea to operating under an established business with systems, resources, and people to fall back on.'],
+          ['Be part of something meaningful','Help create opportunities for younger people, serve your community, and grow alongside other people building the Neighborly Work name.']
+        ].map(([title,desc],i)=><FadeUp key={title} delay={i*.05}>
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">{i===0?<BriefcaseBusiness size={21}/>:i===1?<Users size={21}/>:i===2?<Globe2 size={21}/>:i===3?<Sparkles size={21}/>:i===4?<ShieldCheck size={21}/>:<Handshake size={21}/>}</div>
+            <h3 className="mt-6 text-xl font-bold">{title}</h3>
+            <p className="mt-2 leading-7 text-[#5A6678]">{desc}</p>
+          </div>
+        </FadeUp>)}
+      </div>
+    </div>
+  </div>
+</section>
 </main>}
