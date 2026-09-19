@@ -14,7 +14,7 @@ export default function Home(){return <main>
     <div className="grid h-full items-start lg:grid-cols-[1.05fr_.95fr]">
       <div className="relative z-10 hero-copy">
         <FadeUp><div className="eyebrow text-[#0894F0]">Expanding across Central North Carolina</div></FadeUp>
-        <FadeUp delay={.06}><h1 className="display mt-5 max-w-5xl text-5xl font-bold leading-[.96] sm:text-6xl lg:text-8xl">Neighborly<br/><span className="text-[#0894F0]">Work.</span></h1></FadeUp>
+        <FadeUp delay={.06}><h1 className="display mt-5 max-w-5xl text-5xl font-bold leading-[.96] sm:text-6xl lg:text-8xl">Neighborly<br/><span className="text-[#0894F0]">Work</span></h1></FadeUp>
         <FadeUp delay={.12}><p className="mt-7 max-w-xl text-lg leading-8 text-[#5A6678] sm:text-xl">Neighborly Work handles the dirty outdoor and property jobs that need to be done; while building a pathway for young people to learn how to run a business.</p></FadeUp>
         <FadeUp delay={.18}><div className="mt-9 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="btn-primary">Request Service <ArrowRight size={18} className="ml-2"/></Link><Link href="/join" className="btn-secondary">Work or Franchise With Us</Link></div></FadeUp>
       </div>
