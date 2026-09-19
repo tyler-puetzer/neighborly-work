@@ -95,18 +95,16 @@ export default function Home(){return <main>
   </div>
 </section>
 
-<section className="section-pad bg-[#0B1220] text-white">
+<section id="before-after" className="section-pad bg-[#f7fafc]">
   <div className="container-nw">
-    <div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr]">
-      <FadeUp>
-        <div>
-          <div className="eyebrow text-[#63C400]">Before / after</div>
-          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Small details make a property feel handled.</h2>
-          <p className="mt-5 max-w-md text-white/60 leading-7">A premium service brand should show its work. This is a placeholder comparison component ready for your real project photography.</p>
-        </div>
-      </FadeUp>
-      <FadeUp delay={.08}><BeforeAfter before="A job that needs attention" after="A property that feels ready" label="Placeholder • swap with real photos"/></FadeUp>
-    </div>
+    <FadeUp>
+      <div className="section-heading-center">
+        <div className="eyebrow text-[#0894F0]">See the difference</div>
+        <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Before & After</h2>
+        <p className="mt-4 text-[#5A6678]">From cans to lawns and landscaping, see the difference our work can make.</p>
+      </div>
+    </FadeUp>
+    <FadeUp delay={.08}><div className="mx-auto mt-10 max-w-5xl"><BeforeAfter/></div></FadeUp>
   </div>
 </section>
 
