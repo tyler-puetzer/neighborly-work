@@ -40,7 +40,10 @@ export function BeforeAfter(){
         <img src={current.before} alt={current.name + ' before service'} loading="lazy" />
       </div>
 
-      <div className="before-after-image before-after-after" style={{width:v + '%'}}>
+      <div
+        className="before-after-image before-after-after"
+        style={{clipPath:'inset(0 ' + (100 - v) + '% 0 0)'}}
+      >
         <img src={current.after} alt={current.name + ' after service'} loading="lazy" />
       </div>
 
