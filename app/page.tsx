@@ -40,14 +40,11 @@ export default function Home(){return <main>
       </FadeUp>
       <FadeUp delay={.08}>
         <div>
-          <div className="eyebrow text-[#0894F0]">Why we do it</div>
-          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">More than a job.<br/>A place to start.</h2>
+          <div className="eyebrow text-[#0894F0]">Our Mission</div>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">More Than A Job</h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work was founded in 2026 by two teenagers with a bigger goal than making extra money. We want to make a real difference in our communities by giving young people a chance to learn how business actually works.</p>
           <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">Most places do not hire middle schoolers, but we believe they have potential too. Instead of spending their first working years only learning how to work a shift, they can learn to serve customers, communicate, solve problems, take pride in their work, and build something of their own.</p>
           <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">We started small and have grown our team across Wake County and into Franklin County. The long-term vision is to take the same opportunity across the country and help cultivate the business leaders of tomorrow.</p>
-          <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {['Pride in the work','Great customer service','Friendly and approachable','Build from the ground up'].map(v=><div key={v} className="rounded-2xl border border-slate-200 bg-white px-4 py-3 font-semibold">{v}</div>)}
-          </div>
         </div>
       </FadeUp>
     </div>
