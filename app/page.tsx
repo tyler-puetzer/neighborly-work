@@ -30,6 +30,30 @@ export default function Home(){return <main>
 
 <section className="section-pad border-y border-slate-100 bg-white"><div className="container-nw"><div className="section-heading-center"><div className="eyebrow text-[#0894F0]">What we do</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">The work is simple.<br/>The standard is not.</h2></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{services.map((s,i)=><FadeUp key={s.title} delay={i*.05}><Link href="/services" className="service-card group block" style={{backgroundImage:'none'} as CSSProperties}><div className="service-card-image" style={{backgroundImage:'url(' + s.image + ')'}}/><div className="service-card-content"><div className="flex items-start justify-between"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white"><ServiceIcon icon={s.icon}/></div><Arrow/></div><div className="eyebrow mt-7 text-slate-400">{s.eyebrow}</div><h3 className="mt-2 text-xl font-bold">{s.title}</h3><p className="mt-2 text-sm leading-6 text-[#5A6678]">{s.blurb}</p></div></Link></FadeUp>)}</div></div></section>
 
+<section id="mission-story" className="section-pad bg-[#f7fafc]">
+  <div className="container-nw">
+    <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:items-center">
+      <FadeUp>
+        <div className="mission-logo-wrap">
+          <img src="/brand/neighborly-works-logo-stacked-on-light.svg" alt="Neighborly Work" className="mission-logo"/>
+        </div>
+      </FadeUp>
+      <FadeUp delay={.08}>
+        <div>
+          <div className="eyebrow text-[#0894F0]">Why we do it</div>
+          <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">More than a job.<br/>A place to start.</h2>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work was founded in 2026 by two teenagers with a bigger goal than making extra money. We want to make a real difference in our communities by giving young people a chance to learn how business actually works.</p>
+          <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">Most places do not hire middle schoolers, but we believe they have potential too. Instead of spending their first working years only learning how to work a shift, they can learn to serve customers, communicate, solve problems, take pride in their work, and build something of their own.</p>
+          <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">We started small and have grown our team across Wake County and into Franklin County. The long-term vision is to take the same opportunity across the country and help cultivate the business leaders of tomorrow.</p>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            {['Pride in the work','Great customer service','Friendly and approachable','Build from the ground up'].map(v=><div key={v} className="rounded-2xl border border-slate-200 bg-white px-4 py-3 font-semibold">{v}</div>)}
+          </div>
+        </div>
+      </FadeUp>
+    </div>
+  </div>
+</section>
+
 <section className="section-pad bg-[#0B1220] text-white"><div className="container-nw"><div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><FadeUp><div><div className="eyebrow text-[#63C400]">Before / after</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Small details make a property feel handled.</h2><p className="mt-5 max-w-md text-white/60 leading-7">A premium service brand should show its work. This is a placeholder comparison component ready for your real project photography.</p></div></FadeUp><FadeUp delay={.08}><BeforeAfter before="A job that needs attention" after="A property that feels ready" label="Placeholder • swap with real photos"/></FadeUp></div></div></section>
 
 <section id="story" className="section-pad"><div className="container-nw"><div className="grid gap-12 lg:grid-cols-[1fr_.9fr]"><FadeUp><div className="eyebrow text-[#0894F0]">Our story</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">It started with trash cans.</h2><div className="prose-lite mt-6 max-w-2xl"><p>Neighborly Work was founded today by two teenagers who started with a simple service: cleaning trash cans. From there, the goal is to build a serious operation that can serve entire neighborhoods and take on the outdoor and property work customers actually need.</p><p>That origin matters. The company is designed around the idea that real work teaches real business — how to sell, serve, communicate, solve problems, and take responsibility for a result.</p></div><div className="mt-8"><Link href="/about" className="btn-secondary">Read Our Story <ArrowRight size={18} className="ml-2"/></Link></div></FadeUp><ScaleIn className="rounded-[2.5rem] bg-[#eef8ff] p-7"><div className="h-full rounded-[2rem] border border-[#cceeff] bg-white p-7"><div className="eyebrow text-[#0894F0]">From the first job to the long game</div><div className="mt-8 space-y-6">{[['01','Start small','Do a useful job well.'],['02','Learn the business','Build confidence through real reps.'],['03','Build something','Use the playbook, network, and skills to grow.']].map(([n,t,d])=><div key={n} className="flex gap-4"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#0B1220] text-xs font-bold text-white">{n}</div><div><div className="font-bold">{t}</div><div className="mt-1 text-sm text-[#5A6678]">{d}</div></div></div>)}</div></div></ScaleIn></div></div></section>
