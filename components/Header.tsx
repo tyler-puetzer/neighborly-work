@@ -11,7 +11,7 @@ export function Header(){
   const [open,setOpen]=useState(false)
   useEffect(()=>{ const on=()=>setScrolled(window.scrollY>20); on(); window.addEventListener('scroll',on,{passive:true}); return()=>window.removeEventListener('scroll',on)},[])
   return <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500`}>
-    <div className={`mx-auto flex max-w-7xl items-center justify-between rounded-b-full border border-t-0 px-4 py-3 transition-all duration-500 ${scrolled?'border-slate-200/80 bg-white/88 shadow-soft backdrop-blur-xl':'border-transparent bg-white/30 backdrop-blur-md'}`}>
+    <div className={`mx-auto flex max-w-7xl items-center justify-between rounded-none border-0 px-4 py-3 transition-all duration-500 ${scrolled?'border-slate-200/80 bg-white/88 shadow-soft backdrop-blur-xl':'border-transparent bg-white/30 backdrop-blur-md'}`}>
       <Link href="/" className="relative z-10 flex items-center" onClick={()=>setOpen(false)} aria-label="Neighborly Work home">
         <Image src="/brand/neighborly-work-logo-horizontal-on-light.svg" alt="Neighborly Work" width={178} height={34} priority className="h-7 w-auto"/>
       </Link>
