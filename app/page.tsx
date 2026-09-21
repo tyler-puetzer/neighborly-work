@@ -39,10 +39,52 @@ export default function Home(){return <main>
   </div>
 </section>
 
-<section className="section-pad border-y border-slate-100 bg-white"><div className="container-nw"><div className="section-heading-center"><div className="eyebrow text-[#0894F0]">What we do</div><h2 className="display mt-4 text-4xl font-bold sm:text-5xl">The work is simple.<br/>The standard is not.</h2></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-  {services.filter(s => s.slug !== 'lawn-mowing' && s.slug !== 'landscaping').map((s,i)=><FadeUp key={s.title} delay={i*.05}><Link href="/services" className="service-card group block" style={{backgroundImage:'none'} as CSSProperties}><div className="service-card-image" style={{backgroundImage:'url(' + s.image + ')'}}/><div className="service-card-content"><div className="flex items-start justify-between"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white"><ServiceIcon icon={s.icon}/></div><Arrow/></div><div className="eyebrow mt-7 text-slate-400">{s.eyebrow}</div><h3 className="mt-2 text-xl font-bold">{s.title}</h3><p className="mt-2 text-sm leading-6 text-[#5A6678]">{s.blurb}</p></div></Link></FadeUp>)}
-  <FadeUp delay={.05}><Link href="/services" className="service-card group block" style={{backgroundImage:'none'} as CSSProperties}><div className="service-card-image" style={{backgroundImage:'url(' + services.find(s=>s.slug==='landscaping')?.image + ')'}}/><div className="service-card-content"><div className="flex items-start justify-between"><div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white"><ServiceIcon icon="grass"/></div><Arrow/></div><div className="eyebrow mt-7 text-slate-400">Mow • Plant • Maintain</div><h3 className="mt-2 text-xl font-bold">Landscaping & Lawn Care</h3><p className="mt-2 text-sm leading-6 text-[#5A6678]">Mowing, cleanups, planting, and outdoor work that keeps your property looking cared for.</p></div></Link></FadeUp>
-</div></div></div></section>
+<section className="section-pad border-y border-slate-100 bg-white">
+  <div className="container-nw">
+    <div className="section-heading-center">
+      <div className="eyebrow text-[#0894F0]">What we do</div>
+      <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">
+        The work is simple.<br/>The standard is not.
+      </h2>
+    </div>
+    <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {services.filter(s => s.slug !== 'lawn-mowing' && s.slug !== 'landscaping').map((s, i) => (
+        <FadeUp key={s.title} delay={i * .05}>
+          <Link href="/services" className="service-card group block" style={{ backgroundImage: 'none' } as CSSProperties}>
+            <div className="service-card-image" style={{ backgroundImage: 'url(' + s.image + ')' }} />
+            <div className="service-card-content">
+              <div className="flex items-start justify-between">
+                <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white">
+                  <ServiceIcon icon={s.icon} />
+                </div>
+                <Arrow />
+              </div>
+              <div className="eyebrow mt-7 text-slate-400">{s.eyebrow}</div>
+              <h3 className="mt-2 text-xl font-bold">{s.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[#5A6678]">{s.blurb}</p>
+            </div>
+          </Link>
+        </FadeUp>
+      ))}
+      <FadeUp delay={.05}>
+        <Link href="/services" className="service-card group block" style={{ backgroundImage: 'none' } as CSSProperties}>
+          <div className="service-card-image" style={{ backgroundImage: 'url(' + services.find(s => s.slug === 'landscaping')?.image + ')' }} />
+          <div className="service-card-content">
+            <div className="flex items-start justify-between">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0] transition-colors group-hover:bg-white/15 group-hover:text-white">
+                <ServiceIcon icon="grass" />
+              </div>
+              <Arrow />
+            </div>
+            <div className="eyebrow mt-7 text-slate-400">Mow • Plant • Maintain</div>
+            <h3 className="mt-2 text-xl font-bold">Landscaping & Lawn Care</h3>
+            <p className="mt-2 text-sm leading-6 text-[#5A6678]">Mowing, cleanups, planting, and outdoor work that keeps your property looking cared for.</p>
+          </div>
+        </Link>
+      </FadeUp>
+    </div>
+  </div>
+</section>
 
 <section id="contact-quick" className="section-pad border-y border-slate-100 bg-[#f7fafc]">
   <div className="container-nw">
