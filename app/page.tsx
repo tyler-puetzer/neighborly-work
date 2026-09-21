@@ -30,7 +30,7 @@ export default function Home(){return <main>
             preload="auto"
             aria-hidden="true"
           >
-            <source src="/fit-hero-compressed.mp4" type="video/mp4" />
+            <source src="/Hero-fitted%20(1)%20(1).mp4" type="video/mp4" />
           </video>
           <div className="hero-photo-fade"/>
         </div>
