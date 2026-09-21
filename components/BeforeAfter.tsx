@@ -10,8 +10,8 @@ type Category = {
 const categories: Category[] = [
   {
     name: 'Trash Cans',
-    before: '/before-can.jpg',
-    after: '/after-can.jpg',
+    before: '/before-can.jpg?v=2',
+    after: '/after-can.jpg?v=2',
   },
   {
     name: 'Lawn Care',
