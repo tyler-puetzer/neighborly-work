@@ -10,6 +10,13 @@ export const metadata = {
 }
 
 export default function ServicesPage() {
+  const orderedServices = [...services]
+  const patioIndex = orderedServices.findIndex(service => service.slug === 'patio-building')
+  if (patioIndex >= 0) {
+    const [patio] = orderedServices.splice(patioIndex, 1)
+    const decorationsIndex = orderedServices.findIndex(service => service.slug === 'decorations-light-hanging')
+    orderedServices.splice(decorationsIndex >= 0 ? decorationsIndex : orderedServices.length, 0, patio)
+  }
   return (
     <main className="pt-32">
       <section className="section-pad bg-[#f7fafc]">
@@ -31,7 +38,7 @@ export default function ServicesPage() {
       <section className="section-pad">
         <div className="container-nw">
           <div className="space-y-6">
-            {services.map((service, index) => (
+            {orderedServices.map((service, index) => (
               <FadeUp key={service.title} delay={index * 0.04}>
                 <article className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-soft">
                   <div className="grid lg:grid-cols-[.9fr_1.1fr]">
