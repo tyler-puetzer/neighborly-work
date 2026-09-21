@@ -7,23 +7,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="pt-32">
-      <section className="section-pad bg-[#f7fafc]">
-        <div className="container-nw">
-          <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-            <FadeUp>
-              <div>
-                <div className="eyebrow text-[#0894F0]">Contact</div>
-                <h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Tell us what needs done.</h1>
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.08}>
-              <p className="max-w-2xl text-lg leading-8 text-[#5A6678]">Reach out about a property service, neighborhood partnership, employment, or interest in building a local Neighborly Work business.</p>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
+    <main className="pt-24">
       <section className="section-pad">
         <div className="container-nw">
           <div className="grid gap-6 lg:grid-cols-[.7fr_1.3fr]">
