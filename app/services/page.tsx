@@ -19,22 +19,6 @@ export default function ServicesPage() {
   }
   return (
     <main className="pt-32">
-      <section className="section-pad bg-[#f7fafc]">
-        <div className="container-nw">
-          <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-            <FadeUp>
-              <div>
-                <div className="eyebrow text-[#0894F0]">Services</div>
-                <h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Outdoor work,<br />done with care.</h1>
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.08}>
-              <p className="max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work provides hands-on outdoor and property services in Central North Carolina, with a focus on quality work, clear communication, and treating every property with respect.</p>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad">
         <div className="container-nw">
           <div className="space-y-6">
