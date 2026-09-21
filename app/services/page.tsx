@@ -30,20 +30,28 @@ export default function ServicesPage() {
 
       <section className="section-pad">
         <div className="container-nw">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-6">
             {services.map((service, index) => (
-              <FadeUp key={service.title} delay={index * 0.05}>
-                <article className="service-card h-full">
-                  <div className="flex items-start justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">
-                      <ServiceIcon icon={service.icon} />
+              <FadeUp key={service.title} delay={index * 0.04}>
+                <article className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-soft">
+                  <div className="grid lg:grid-cols-[.9fr_1.1fr]">
+                    <div className="relative min-h-[260px] overflow-hidden lg:min-h-[340px]">
+                      <img src={service.image} alt={service.title} className="absolute inset-0 h-full w-full object-cover" />
                     </div>
-                    <Arrow />
+                    <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+                      <div className="flex items-start justify-between gap-6">
+                        <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#eef8ff] text-[#0894F0]">
+                          <ServiceIcon icon={service.icon} />
+                        </div>
+                        <Arrow />
+                      </div>
+                      <div className="eyebrow mt-7 text-slate-400">{service.eyebrow}</div>
+                      <h2 className="mt-2 text-3xl font-bold sm:text-4xl">{service.title}</h2>
+                      <p className="mt-4 text-lg leading-8 text-[#5A6678]">{service.blurb}</p>
+                      <p className="mt-3 leading-7 text-[#5A6678]">{service.detail}</p>
+                      <Link href="/contact" className="mt-7 inline-flex items-center font-semibold text-[#0894F0] hover:text-[#0b77bd]">Ask about this service <ArrowRight size={16} className="ml-2" /></Link>
+                    </div>
                   </div>
-                  <div className="eyebrow mt-8 text-slate-400">{service.eyebrow}</div>
-                  <h2 className="mt-2 text-2xl font-bold">{service.title}</h2>
-                  <p className="mt-3 leading-7 text-[#5A6678]">{service.blurb}</p>
-                  <Link href="/contact" className="mt-7 inline-flex items-center font-semibold text-[#0894F0] hover:text-[#0b77bd]">Ask about this service <ArrowRight size={16} className="ml-2" /></Link>
                 </article>
               </FadeUp>
             ))}
