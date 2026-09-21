@@ -17,18 +17,6 @@ const expectations = [
 export default function JoinPage() {
   return (
     <main className="pt-32">
-      <section className="section-pad bg-[#f7fafc]">
-        <div className="container-nw">
-          <FadeUp>
-            <div className="max-w-4xl">
-              <div className="eyebrow text-[#0894F0]">Franchise / Join Us</div>
-              <h1 className="display mt-4 text-5xl font-bold sm:text-7xl">Work with us.<br />Or build with us.</h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work is building opportunities for people who want to do real work, serve customers well, and learn how to build a business from the ground up.</p>
-            </div>
-          </FadeUp>
-        </div>
-      </section>
-
       <section className="section-pad">
         <div className="container-nw">
           <div className="grid gap-6 lg:grid-cols-2">
