@@ -14,7 +14,7 @@ export const services = [
   {title:'Garden Beds & Stonework', slug:'garden-beds-stonework', blurb:'Flower beds, planting areas, wood borders, and stone edging built to fit around your home.', eyebrow:'Plant • Edge • Build', icon:'sprout', image:'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=85'},
   {title:'Junk Removal', slug:'junk-removal', blurb:'We haul away unwanted stuff and leave the space ready to use.', eyebrow:'Clear • Haul • Reset', icon:'truck', image:'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1200&q=85'},
   {title:'Decorations & Light Hanging', slug:'decorations-light-hanging', blurb:'Seasonal decorations and light hanging for homes and properties.', eyebrow:'Hang • Set up • Take down', icon:'sparkles', image:'https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1200&q=85'},
-  {title:'Something Else?', slug:'other-services', blurb:'If it is an outdoor or property job, reach out. We can talk through it.', eyebrow:'Just ask', icon:'wrench', image:'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85'},
+  {title:'Patio Building', slug:'patio-building', blurb:'Build or improve your outdoor space with a patio designed for your home and property.', eyebrow:'Build • Improve • Enjoy', icon:'wrench', image:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85'},
 ]
 
 export const nav = [
