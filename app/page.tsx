@@ -21,7 +21,17 @@ export default function Home(){return <main>
       </div>
       <ScaleIn delay={.12} className="hero-image-column">
         <div className="hero-photo-wrap">
-          <img src="https://images.foxtv.com/static.fox26houston.com/www.fox26houston.com/content/uploads/2023/06/1280/720/Screenshot-2023-06-22-183843.jpg?ve=1&tl=1" alt="Outdoor property work" className="hero-photo"/>
+          <video
+            className="hero-photo"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          >
+            <source src="/Hero.mp4" type="video/mp4" />
+          </video>
           <div className="hero-photo-fade"/>
         </div>
       </ScaleIn>
