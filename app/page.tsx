@@ -132,7 +132,7 @@ export default function Home(){return <main>
           <p className="mt-4 max-w-xl text-[#5A6678]">Real feedback from the people and neighborhoods we serve. Reviews will be connected directly to our Google Business Profile as the site moves into production.</p>
         </div>
       </FadeUp>
-      <Link href="/contact#review" className="btn-secondary">Leave a Review</Link>
+      <a href="https://share.google/Nr0gD2OrVcSbvxVj7" target="_blank" rel="noopener noreferrer" className="btn-secondary">Leave a Review</a>
     </div>
     <div className="mt-10 grid gap-4 md:grid-cols-3">
       {['Verified customer feedback','Recent project feedback','Neighborhood feedback'].map((label,i)=><FadeUp key={label} delay={i*.06}>
