@@ -30,7 +30,7 @@ export default function ContactPage() {
                 <div className="eyebrow text-[#0894F0]">Get a quote / get in touch</div>
                 <h2 className="mt-4 text-3xl font-bold">Request form</h2>
                 <p className="mt-3 text-sm leading-6 text-[#5A6678]">Tell us what you need and the form will send your request directly to our service email.</p>
-                <form className="mt-8 grid gap-5" action="https://formsubmit.co/service.neighborly.work@gmail.com" method="POST">
+                <form className="mt-8 grid gap-5" action="https://formsubmit.co/ddcfa1259a641e3e1c281830165bccd3" method="POST">
                   <input type="hidden" name="_subject" value="New Neighborly Work Service Request" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
