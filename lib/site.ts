@@ -4,7 +4,7 @@ export const site = {
   description: 'Hands-on outdoor and property services in Central North Carolina, built around great work and a pathway for the next generation to learn business.',
   url: '',
   serviceArea: 'Central North Carolina',
-  email: '',
+  email: 'service.neighborly.work@gmail.com',
   phone: '',
 }
 
@@ -19,5 +19,11 @@ export const services = [
 ]
 
 export const nav = [
-  ['Home','/'],['Services','/services'],['About / Our Story','/about'],['Impact & Mission','/#mission'],['Franchise / Join Us','/join'],['Reviews','/#reviews'],['Contact','/contact']
+  ['Home','/'],
+  ['Services','/services'],
+  ['Our Story','/about'],
+  ['Mission','/#mission-story'],
+  ['Careers','/join'],
+  ['Reviews','https://share.google/Nr0gD2OrVcSbvxVj7'],
+  ['Contact','/contact']
 ]
