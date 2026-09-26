@@ -15,8 +15,8 @@ const categories: Category[] = [
   },
   {
     name: 'Lawn Care',
-    before: '/before-lawn.jpg',
-    after: '/after-lawn.jpg',
+    before: '/lawn-before.png',
+    after: '/lawn-after.jpg',
   },
   {
     name: 'Landscaping',
