@@ -15,8 +15,8 @@ const categories: Category[] = [
   },
   {
     name: 'Lawn Care',
-    before: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1600&q=85',
-    after: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=85',
+    before: '/before-lawn.jpg',
+    after: '/after-lawn.jpg',
   },
   {
     name: 'Landscaping',
