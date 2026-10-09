@@ -2,7 +2,7 @@ export const site = {
   name: 'Neighborly Work',
   shortName: 'Neighborly Work',
   description: 'Hands-on outdoor and property services in Central North Carolina, built around great work and a pathway for the next generation to learn business.',
-  url: '',
+  url: 'https://neighborly-work-r1tm-five.vercel.app',
   serviceArea: 'Central North Carolina',
   email: 'service.neighborly.work@gmail.com',
   phone: '919-579-6519',
