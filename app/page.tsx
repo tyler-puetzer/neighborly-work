@@ -113,9 +113,9 @@ export default function Home(){return <main>
         <div>
           <div className="eyebrow text-[#0894F0]">Our Mission</div>
           <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">More Than A Job</h2>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work was founded in 2026 by two teenagers with a bigger goal than making extra money. We want to make a real difference in our communities by giving young people a chance to learn how business actually works.</p>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5A6678]">Neighborly Work was founded in 2026 by its owner with a bigger goal than making extra money. Today, the founder works alongside friends and team members to serve local customers and build a business that can create opportunities for others.</p>
           <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">Most places do not hire middle schoolers, but we believe they have potential too. Instead of spending their first working years only learning how to work a shift, they can learn to serve customers, communicate, solve problems, take pride in their work, and build something of their own.</p>
-          <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">We started small and have grown our team across Wake County and into Franklin County. The long-term vision is to take the same opportunity across the country and help cultivate the business leaders of tomorrow.</p>
+          <p className="mt-4 max-w-2xl leading-7 text-[#5A6678]">We started small and are growing our team across Wake County and into Franklin County. The long-term vision is to create more opportunities for young people to learn responsibility, customer service, and the fundamentals of running a business.</p>
         </div>
       </FadeUp>
     </div>
@@ -157,7 +157,7 @@ export default function Home(){return <main>
       <div className="section-heading-center">
         <div className="eyebrow text-[#0894F0]">See the difference</div>
         <h2 className="display mt-4 text-4xl font-bold sm:text-5xl">Before & After</h2>
-        <p className="mt-4 text-[#5A6678]">From cans to lawns and landscaping, see the difference our work can make.</p>
+        <p className="mt-4 text-[#5A6678]">From trash cans to lawns, see the difference our work can make.</p>
       </div>
     </FadeUp>
     <FadeUp delay={.08}><div className="mx-auto mt-10 max-w-5xl"><BeforeAfter/></div></FadeUp>
