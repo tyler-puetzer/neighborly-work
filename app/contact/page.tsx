@@ -20,7 +20,7 @@ export default function ContactPage() {
                 </div>
                 <div className="rounded-[2rem] border border-slate-200 bg-white p-7">
                   <div className="eyebrow text-[#0894F0]">Contact details</div>
-                  <p className="mt-4 leading-7 text-[#5A6678]">Phone and email details are intentionally not published until the official company contact information is confirmed.</p>
+                  <div className="mt-4 space-y-3 leading-7 text-[#5A6678]"><a className="block transition hover:text-[#0894F0]" href="mailto:service.neighborly.work@gmail.com">service.neighborly.work@gmail.com</a><a className="block transition hover:text-[#0894F0]" href="tel:9195796519">919-579-6519</a></div>
                 </div>
               </div>
             </FadeUp>
