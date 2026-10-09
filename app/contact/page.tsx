@@ -29,7 +29,7 @@ export default function ContactPage() {
               <div className="rounded-[2.5rem] border border-slate-200 bg-white p-7 shadow-soft sm:p-9">
                 <div className="eyebrow text-[#0894F0]">Get a quote / get in touch</div>
                 <h2 className="mt-4 text-3xl font-bold">Request form</h2>
-                <p className="mt-3 text-sm leading-6 text-[#5A6678]">Tell us what you need and the form will send your request directly to our service email.</p>
+                <p className="mt-3 text-sm leading-6 text-[#5A6678]">Choose the option that best fits your message. You can use this form for service requests, job applications, business opportunities, or general questions.</p>
                 <form className="mt-8 grid gap-5" action="https://formsubmit.co/ddcfa1259a641e3e1c281830165bccd3" method="POST">
                   <input type="hidden" name="_subject" value="New Neighborly Work Service Request" />
                   <input type="hidden" name="_captcha" value="false" />
@@ -39,7 +39,7 @@ export default function ContactPage() {
                     <label className="field"><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label>
                     <label className="field"><span>Phone</span><input type="tel" name="phone" placeholder="Phone number" /></label>
                   </div>
-                  <label className="field"><span>Service needed</span><select name="service" defaultValue="" required><option value="" disabled>Select a service</option><option>Trash Can Cleaning</option><option>Lawn Mowing</option><option>Landscaping</option><option>Junk Removal</option><option>Other Outdoor & Property Services</option><option>Employment</option><option>Franchise / Local Business</option></select></label>
+                  <label className="field"><span>What are you contacting us about?</span><select name="inquiry_type" defaultValue="" required><option value="" disabled>Select an option</option><optgroup label="Services"><option>Trash Can Cleaning</option><option>Lawn Mowing</option><option>Landscaping</option><option>Garden Beds & Stonework</option><option>Junk Removal</option><option>Decorations & Light Hanging</option><option>Patio Building</option><option>Other Outdoor & Property Services</option></optgroup><optgroup label="Work with us"><option>Apply for a Job</option><option>Employment / Team Opportunities</option><option>Franchise / Local Business Opportunity</option><option>Business Partnership</option></optgroup><option>General Question</option></select></label>
                   <label className="field"><span>Message</span><textarea name="message" rows={5} placeholder="Tell us what you need..." required /></label>
                   <button type="submit" className="btn-primary w-full">Send Request</button>
                 </form>
