@@ -5,7 +5,7 @@ export const site = {
   url: '',
   serviceArea: 'Central North Carolina',
   email: 'service.neighborly.work@gmail.com',
-  phone: '',
+  phone: '919-579-6519',
 }
 
 export const services = [
