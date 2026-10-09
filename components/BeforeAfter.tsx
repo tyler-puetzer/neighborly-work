@@ -18,11 +18,6 @@ const categories: Category[] = [
     before: '/lawn-before.png',
     after: '/lawn-after.jpg',
   },
-  {
-    name: 'Landscaping',
-    before: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=85',
-    after: 'https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1600&q=85',
-  },
 ]
 
 export function BeforeAfter(){
